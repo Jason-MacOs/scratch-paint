@@ -44,6 +44,31 @@ const _getBackgroundGuideLayer = function () {
 
 const _makeGuideLayer = function () {
     const guideLayer = new paper.Layer();
+    guideLayer.locked = true;
+
+    /*
+    const vLine = new paper.Path.Line(new paper.Point(0, -20), new paper.Point(0, 20));
+    vLine.strokeWidth = 1;
+    vLine.strokeColor = '#000';
+    vLine.position = new paper.Point(ART_BOARD_WIDTH / 2, ART_BOARD_HEIGHT / 2);
+    vLine.guide = true;
+    vLine.locked = true;
+
+    const hLine = new paper.Path.Line(new paper.Point(-20, 0), new paper.Point(20, 0));
+    hLine.strokeWidth = 1;
+    hLine.strokeColor = '#000';
+    hLine.position = new paper.Point(ART_BOARD_WIDTH / 2, ART_BOARD_HEIGHT / 2);
+    hLine.guide = true;
+    hLine.locked = true;
+
+    const circle = new paper.Shape.Circle(new paper.Point(0, 0), 10);
+    circle.strokeWidth = 1;
+    circle.strokeColor = '#000';
+    circle.position = new paper.Point(ART_BOARD_WIDTH / 2, ART_BOARD_HEIGHT / 2);
+    circle.guide = true;
+    circle.locked = true;
+    */
+
     guideLayer.data.isGuideLayer = true;
     return guideLayer;
 };
@@ -161,23 +186,23 @@ const _makeBackgroundGuideLayer = function () {
     vBackground.guide = true;
     vBackground.locked = true;
 
-    const vLine = new paper.Path.Line(new paper.Point(0, -7), new paper.Point(0, 7));
-    vLine.strokeWidth = 2;
-    vLine.strokeColor = '#ccc';
+    const vLine = new paper.Path.Line(new paper.Point(0, -20), new paper.Point(0, 20));
+    vLine.strokeWidth = 1;
+    vLine.strokeColor = '#000';
     vLine.position = new paper.Point(ART_BOARD_WIDTH / 2, ART_BOARD_HEIGHT / 2);
     vLine.guide = true;
     vLine.locked = true;
 
-    const hLine = new paper.Path.Line(new paper.Point(-7, 0), new paper.Point(7, 0));
-    hLine.strokeWidth = 2;
-    hLine.strokeColor = '#ccc';
+    const hLine = new paper.Path.Line(new paper.Point(-20, 0), new paper.Point(20, 0));
+    hLine.strokeWidth = 1;
+    hLine.strokeColor = '#000';
     hLine.position = new paper.Point(ART_BOARD_WIDTH / 2, ART_BOARD_HEIGHT / 2);
     hLine.guide = true;
     hLine.locked = true;
 
-    const circle = new paper.Shape.Circle(new paper.Point(0, 0), 5);
-    circle.strokeWidth = 2;
-    circle.strokeColor = '#ccc';
+    const circle = new paper.Shape.Circle(new paper.Point(0, 0), 10);
+    circle.strokeWidth = 1;
+    circle.strokeColor = '#000';
     circle.position = new paper.Point(ART_BOARD_WIDTH / 2, ART_BOARD_HEIGHT / 2);
     circle.guide = true;
     circle.locked = true;
